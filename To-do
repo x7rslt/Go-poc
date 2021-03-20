@@ -1,0 +1,34 @@
+一、OA系统
+泛微OA E-cology（CNVD-2019-32204）远程命令执行漏洞
+泛微OA WorkflowCenterTreeData接口注入
+泛微ecology OA数据库配置信息泄露
+通达OA任意文件删除&文件上传RCE
+通达OA任意文件上传/文件包含GetShell
+通达OA任意用户登录漏洞
+通达OA 11.2后台getshell
+二、E-mail
+Microsoft Exchange Server 远程代码执行漏洞(CVE-2020-17083)
+Microsoft Exchange远程代码执行突破（CVE-2020-16875）
+微软EXCHANGE服务的远程代码执行漏洞(CVE-2020-0688)
+三、Web中间件
+Apache Solr RCE—（CVE-2019-0192）
+Apache Tika 命令注入(CVE-2018-1335)
+Apache Axis1 RCE
+Tomcat信息泄漏和远程代码执行漏洞（CVE-2017-12615/CVE-2017-12616）
+Tomcat本地提权漏洞（CVE-2016-1240）
+Weblogic未经授权的旁路RCE（CVE-2020–14882）
+JBoss JMXInvokerServlet 反序列化
+四、源代码管理
+GitLab 12.9.0任意文件读取（CVE-2020-10977）
+
+五、项目管理系统
+禅道CMS文件上传漏洞（CNVD-C-2020-121325）
+Jira SSRF跳转漏洞（CVE-2017-9506）
+Atlassian JIRA服务器模板注入漏洞复现（CVE-2019-11581）
+六、开源运维监控
+Jenkins路径遍历任意文件写入漏洞（CVE-2019-10352）
+Zabbix远程代码执行漏洞（CVE-2020-11800）
+Nagios XI 5.6.9远程代码执行漏洞（CVE-2019-20197）
+七、堡垒机
+JumpServer远程执行漏洞
+齐治堡垒机前台远程代码执行漏洞

@@ -21,3 +21,10 @@ requests:
       - type: status
         status:
           - 200
+    extractors:
+      - type: regex
+        name: core_name
+        part: body
+        internal: true
+        regex:
+          - "(?m)[0-9]{3,10}\\.[0-9]+"
