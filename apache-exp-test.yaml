@@ -12,19 +12,17 @@ requests:
   - method: GET
     path:
       - "{{BaseURL}}/solr/admin/cores?indexInfo=false&wt=json"
-    matchers-condition: and
-    matchers:
-      - type: word
-        words:
-          - "name"
-        condition: and
-      - type: status
-        status:
-          - 200
+    
     extractors:
       - type: regex
-        name: core_name
         part: body
-        internal: true
+        name: core_name
         regex:
-          - "(?m)[0-9]{3,10}\\.[0-9]+"
+          - '\"status\":\{\s*\"(.*?)\"'
+
+//target http://15.206.158.108:8983/solr/AirlineList/config
+//to-do
+//headless script for automate
+https://github.com/projectdiscovery/nuclei-templates/blob/db26ee650e78afb9c0ca7d3221a5590d7d0c247c/default-logins/dvwa/dvwa-default-login.yaml
+https://github.com/projectdiscovery/nuclei-templates/blob/e3d58afa23f3298ffb7a7ac13bbcca67efee1782/vulnerabilities/other/powercreator-cms-rce.yaml
+https://github.com/projectdiscovery/nuclei-templates/blob/9976e74fc726104415c8812c32e7aeb0db2a9436/headless/postmessage-tracker.yaml

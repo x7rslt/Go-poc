@@ -1,0 +1,21 @@
+id: Apache Solr
+
+info:
+  name: 任意文件读取
+  author: x7rslt
+  severity: critical
+  description: Apache Solr的文件读取与SSRF漏洞，由于Apache Solr默认安装时未开启身份验证，导致未经身份验证的攻击者可利用Config API打开requestDispatcher.requestParsers.enableRemoteStreaming开关，从而利用漏洞进行文件读取。目前漏洞PoC已公开，请相关用户采取措施进行防护。
+  reference: https://issues.apache.org/jira/browse/SOLR?spm=a2c4g.11174386.n2.4.4fda1051uA9TBw
+  tags: Apache Solr
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}/solr/admin/cores?indexInfo=false&wt=json"
+    
+    extractors:
+      - type: regex
+        part: body
+        name: core_name
+        regex:
+          - '\"status\":\{\s*\"(.*?)\"'
